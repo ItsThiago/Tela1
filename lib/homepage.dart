@@ -49,22 +49,22 @@ class Homepage extends StatelessWidget {
         ),
         const Center(
             child: Text(
-          'Get your Money ',
+          'Pegue seu dinheiro ',
           style: TextStyle(
               color: Colors.white,
               fontSize: 30,
               fontFamily: AutofillHints.birthdayDay),
         )),
         const Text(
-          'Under control',
+          'Sob controle',
           style: TextStyle(
               fontSize: 20,
               color: Colors.white,
               fontFamily: AutofillHints.birthdayDay),
         ),
         const SizedBox(height: 20),
-        const Text('Manage your expenses', style: TextStyle(fontSize: 30, color: Colors.white)), 
-        const Text('seamlessly', style: TextStyle(fontSize: 20, color:  Colors.white)),
+        const Text('Gerencie suas despesas', style: TextStyle(fontSize: 30, color: Colors.white)), 
+        const Text('perfeitamente', style: TextStyle(fontSize: 20, color:  Colors.white)),
         const SizedBox(height: 10),
   Column(
     children: [
@@ -76,7 +76,7 @@ class Homepage extends StatelessWidget {
     borderRadius: BorderRadius.circular(50)),
   child: const Center(
        child: Text(
-     'Sign Up with Email ID',
+     'Inscreva-se com ID de e-mail',
      style: TextStyle(
      color: Colors.white,
      fontSize: 20,
@@ -98,7 +98,7 @@ class Homepage extends StatelessWidget {
   child: Image.asset(''), 
       ),
     const Text(
- 'Sign Up with Google',
+ 'Inscreva-se no Google',
       style: TextStyle(
     color: Colors.black,
     fontSize: 20,
@@ -110,9 +110,9 @@ class Homepage extends StatelessWidget {
  Row(
               mainAxisAlignment: MainAxisAlignment.center,
    children:  [
-  const  Text('Already have an account?', style: TextStyle(fontSize: 18, color: Colors.white)),
+  const  Text('Já tem uma conta?', style: TextStyle(fontSize: 18, color: Colors.white)),
     const SizedBox(width: 5), 
-      Text('Sign in', style: TextStyle(fontSize: 18, color: Colors.blue),), 
+      Text('Entrar', style: TextStyle(fontSize: 18, color: Colors.blue),), 
   SizedBox(height: 100,)
               ],            
             ) 
