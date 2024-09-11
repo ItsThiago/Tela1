@@ -66,6 +66,7 @@ class Homepage extends StatelessWidget {
         const Text('Gerencie suas despesas', style: TextStyle(fontSize: 30, color: Colors.white)), 
         const Text('perfeitamente', style: TextStyle(fontSize: 20, color:  Colors.white)),
         const SizedBox(height: 10),
+
   Column(
     children: [
     Container(
