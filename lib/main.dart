@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Appwidget.dart';
+import 'package:myapp/App_widgets.dart';
+
 
 void main() {
-  runApp(Appwidget());
+  runApp( const AppWidgets());
 }

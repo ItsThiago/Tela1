@@ -4,124 +4,252 @@ import 'package:flutter/widgets.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const SizedBox(
-          height: 20,
-        ),
-        Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  Column(children: [
-   Container(
-     width: 40.8,
-       height: 40.8,
-     decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 11, 7, 241),
-      borderRadius: BorderRadius.circular(50)),
-       ),
-     const SizedBox(height: 10),
-      Container(
-       width: 40.8,
-      height: 50,
-       decoration: const BoxDecoration(
-       color: Color.fromARGB(255, 11, 7, 241),
-        borderRadius:
-         BorderRadius.only(bottomLeft: Radius.circular(100))),
-       ),
-       ]),
-      SizedBox(width: 5),
-    Container(
-     width: 50,
-    height: 100,
-     decoration: const BoxDecoration(
-      color: Color.fromARGB(255, 11, 7, 241),
-      borderRadius: BorderRadius.only(
-      bottomLeft: Radius.elliptical(50, 50),
-        topRight: Radius.elliptical(50, 50))),
-            )
-          ],
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        const Center(
-            child: Text(
-          'Pegue seu dinheiro ',
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontFamily: AutofillHints.birthdayDay),
-        )),
-        const Text(
-          'Sob controle',
-          style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontFamily: AutofillHints.birthdayDay),
-        ),
-        const SizedBox(height: 20),
-        const Text('Gerencie suas despesas', style: TextStyle(fontSize: 30, color: Colors.white)), 
-        const Text('perfeitamente', style: TextStyle(fontSize: 20, color:  Colors.white)),
-        const SizedBox(height: 10),
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0XFFE4645F), Color(0XFFE45174)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+          ),
 
-  Column(
-    children: [
-    Container(
-    width: 480,
-   height: 50,
-     decoration: BoxDecoration(
-    color: const Color.fromARGB(255, 11, 7, 241),
-    borderRadius: BorderRadius.circular(50)),
-  child: const Center(
-       child: Text(
-     'Inscreva-se com ID de e-mail',
-     style: TextStyle(
-     color: Colors.white,
-     fontSize: 20,
-   fontFamily: AutofillHints.birthdayDay),
-    ),
-     ),
-    ),
-   const SizedBox(height: 13),
-   Column(children: [
-  Container(
-   width: 480,
-  height: 50,
-  decoration: BoxDecoration(
-  color: const Color.fromARGB(255, 245, 245, 248),
-   borderRadius: BorderRadius.circular(50)),
- child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-   SizedBox( height: 20,
-   width: 30,
-  child: Image.asset(''), 
+          // Os widgets ficam sobre o gradiente
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 70,
+                        height: 70,
+                        child: Image.network(
+                            'https://img.icons8.com/?size=48&id=2U1pv20TnZVf&format=png'),
+                      ),
+                      const Center(
+                        child: Text(
+                          'Tinder',
+                          style: TextStyle(
+                              fontSize: 60,
+                              fontFamily: 'Pacific',
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Column(
+                children: [
+                  const Center(
+                    child: Text(
+                      'Ao tocar em Criar conta ou Entrar, você concorda com our',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
+                    ),
+                  ),
+                  const Center(
+                    child: Text.rich(
+                      TextSpan(
+                        text: ' Termos ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: ' Saiba como processamos seus dados, em seu  ',
+                            style: TextStyle(
+                                decoration: TextDecoration.none,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text: 'Privacy',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const Center(
+                    child: Text.rich(
+                      TextSpan(
+                        text: ' Político',
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.white,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        children: [
+                          TextSpan(
+                            text: ' and ',
+                            style: TextStyle(
+                                decoration: TextDecoration.none,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          TextSpan(
+                            text: 'Política de Cookies',
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                          width: 370,
+                          height: 90,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                                colors: [Color(0XFFE4645F), Color(0XFFE45174)]),
+                            borderRadius: BorderRadius.circular(40),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 4,
+                            ),
+                          ),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 30,
+                                height: 70,
+                                child: Icon(Icons.apple,
+                                    color: Colors.white, size: 60),
+                              ),
+                              SizedBox(
+                                width: 50,
+                              ),
+                              Center(
+                                child: Text(
+                                  'ENTRAR COM A MAÇÃ',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          )),
+                      const SizedBox(height: 10),
+                      Container(
+                          height: 90,
+                          width: 370,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                                colors: [Color(0XFFE4645F), Color(0XFFE45174)]),
+                            borderRadius: BorderRadius.circular(40),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 4,
+                            ),
+                          ),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 80,
+                                height: 60,
+                                child: Icon(Icons.facebook,
+                                    color: Colors.white, size: 60),
+                              ),
+                              Center(
+                                child: Text(
+                                  'ENTRAR NO FACEBOOK',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              )
+                            ],
+                          )),
+                      const SizedBox(height: 10),
+                      Container(
+                        height: 90,
+                        width: 370,
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                              colors: [Color(0XFFE4645F), Color(0XFFE45174)]),
+                          borderRadius: BorderRadius.circular(40),
+                          border: Border.all(
+                            color: Colors.white,
+                            width: 4,
+                          ),
+                        ),
+                        child: const Row(
+                          children: [
+                            SizedBox(
+                              width: 80,
+                              height: 60,
+                              child: Icon(
+                                Icons.messenger,
+                                color: Colors.white,
+                                size: 60,
+                              ),
+                            ),
+                            Center(
+                              child: Text(
+                                'ENTRAR COM NÚMERO DE TELEFONE',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:2238822559.
+                    const SizedBox(height: 40,),  const Center(
+                          child: Text(
+                        'Problemas para fazer login?',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      )),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
-    const Text(
- 'Inscreva-se no Google',
-      style: TextStyle(
-    color: Colors.black,
-    fontSize: 20,
-  fontFamily: AutofillHints.birthdayDay),
-      ),           
-       ],),
-      ),
-     ]),
- Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-   children:  [
-  const  Text('Já tem uma conta?', style: TextStyle(fontSize: 18, color: Colors.white)),
-    const SizedBox(width: 5), 
-      Text('Entrar', style: TextStyle(fontSize: 18, color: Colors.blue),), 
-  SizedBox(height: 100,)
-              ],            
-            ) 
-          ],
-        )
-      ]),
-  backgroundColor: Colors.black,
     );
   }
 }
-
